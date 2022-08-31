@@ -5,6 +5,12 @@ const person = {
   age: 25,
 };
 
-const json = JSON.stringify(person);
+function filter (key, value) {
+  if (typeof value === "string") {
+    return; 
+  }
+  return value;
+}
 
-console.log(json); // Should return: { id: 1, age: 25 }
+
+console.log(JSON.stringify(person, filter)); 
