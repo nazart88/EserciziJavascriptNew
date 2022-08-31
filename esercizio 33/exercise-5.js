@@ -1,6 +1,4 @@
-function firstUncompletedNote(notes) {
-  // ...
-}
+
 
 const notes = [
   {
@@ -73,8 +71,17 @@ const notes = [
   }
 ]
 
+
+function firstUncompletedNote(notes) {
+
+  return notes.find (item => item.todos.find(item => item.done===false))
+  
+}
+
 const noteInProgress = firstUncompletedNote(notes);
-console.log('All notes: ', notes);
+// console.log('All notes: ', notes);
 console.log('First note in progress: ', noteInProgress);
 
-kkkk
+
+
+
